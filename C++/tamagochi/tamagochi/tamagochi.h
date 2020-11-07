@@ -10,6 +10,11 @@ public:
 	void play();
 	void eat();
 	void talk() const;
+	int getHunger();
+	int getBoredom();
+	void stats();
+	void passTime();
+	
 
 
 private:

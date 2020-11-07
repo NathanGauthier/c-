@@ -1,6 +1,11 @@
 #include <iostream>
 #include "tamagochi.h"
+#include <chrono>
+#include <thread>
+
 using namespace std;
+using namespace std::chrono;
+using namespace std::this_thread;
 
 
 Tamagochi::Tamagochi(int pHunger, int pBoredom) : hunger(pHunger), boredom(pBoredom)
@@ -22,7 +27,7 @@ Tamagochi::~Tamagochi()
 
 void Tamagochi::talk() const
 {
-	cout << "jsuis a la zone sans casque sur un scooter kité" << endl;
+	cout << "jsuis a la zone sans casque sur un scooter kite" << endl;
 
 }
 
@@ -44,4 +49,40 @@ void Tamagochi::eat()
 	{
 		hunger = 0;
 	}
+}
+
+int Tamagochi::getHunger()
+{
+	return hunger;
+}
+
+int Tamagochi::getBoredom()
+{
+	return boredom;
+}
+
+void Tamagochi::stats()
+{
+	cout << "Hunger : " << getHunger() << endl;
+	cout << "Boredom : "<<  getBoredom() << endl;
+
+}
+
+
+void Tamagochi::passTime()
+{	sleep_for(seconds(1));
+	hunger += 5;
+	boredom += 5;
+	
+	if (hunger > 100)
+	{
+		hunger = 100;
+	}
+	if (boredom > 100)
+	{
+		boredom = 100;
+	}
+	std::cout << "\n \t Hunger : " << hunger << std::endl;
+	std::cout << "\n  \t Boredom :  " << boredom << std::endl;
+	
 }

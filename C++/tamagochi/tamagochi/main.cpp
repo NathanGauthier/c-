@@ -1,38 +1,66 @@
 
 
-#include "tamagochi.h"
 #include <iostream>
-#include <chrono>
-#include <thread>
-	using namespace std::chrono;
-	using namespace std::this_thread;
+#include "tamagochi.h"
+#include <string>
+
+	using std::string;
 
 	
-	void passTime(int Ahunger, int Aboredom)
-	{
-		Ahunger += 5;
-		Aboredom += 5;
-		std::cout << Ahunger << std::endl;
-		std::cout << Aboredom << std::endl;
-		sleep_for(seconds(3));
-	}
-
+	
 
 int main(int argc, char* argv)
 {
-
-
-	int nomb = 500000;
-	while (nomb > 0)
+	Tamagochi bobby;
+	string action;
+	bool quit = false;
 	
+	
+
+	while (!quit)
 	{
-		nomb -= 1;
-		std::cout << nomb << std::endl;
-		sleep_for(seconds(3));
-	}
-	
-	
+		bobby.passTime();
+
+		std::cout << " what you wanna do ? Play ? Talk ? Eat ? Stat ? " << std::endl;
+		std::cin >> action;
+
+		if (action == "play")
+		{
+			bobby.play();
+		}
+
+		if (action == "eat")
+		{
+			bobby.eat();
+		}
+
+		if (action == "talk")
+		{
+			bobby.talk();
+		}
+
+		if (action == "stat")
+		{
+
+			bobby.stats();
+			
+		}
+
 		
+
+	}
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 
 	
 	
