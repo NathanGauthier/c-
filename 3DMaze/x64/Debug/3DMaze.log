@@ -1,0 +1,12 @@
+﻿  Main.cpp
+D:\Artfx\C++ Proj\3DMaze\Main.cpp(154,87): warning C4244: 'argument' : conversion de 'int' en 'T', perte possible de données
+          with
+          [
+              T=irr::f32
+          ]
+D:\Artfx\C++ Proj\3DMaze\Main.cpp(154,77): warning C4244: 'argument' : conversion de 'int' en 'T', perte possible de données
+          with
+          [
+              T=irr::f32
+          ]
+  3DMaze.vcxproj -> D:\Artfx\C++ Proj\3DMaze\x64\Debug\3DMaze.exe

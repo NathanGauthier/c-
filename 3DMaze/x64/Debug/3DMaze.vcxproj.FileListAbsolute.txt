@@ -1,0 +1,2 @@
+D:\Artfx\C++ Proj\3DMaze\x64\Debug\3DMaze.exe
+D:\Artfx\C++ Proj\3DMaze\x64\Debug\3DMaze.pdb
